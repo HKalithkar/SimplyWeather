@@ -5,7 +5,7 @@ function Flag({ country }) {
 
   return (
     <div className="flag-container">
-      <img src={imgURL} alt="Country Flag" height="200px" border="5" />
+      <img src={imgURL} alt="Country Flag" style={{height: "200px", maxWidth: "300px"}} border="2" />
     </div>
   );
 }

@@ -24,7 +24,9 @@ const getData = async (
     humidity: weatherData.main.humidity,
     country: weatherData.sys.country,
     timezone: weatherData.timezone,
-    city: weatherData.name
+    city: weatherData.name,
+    wind: weatherData.wind.speed,
+    visibility: weatherData.visibility
   };
 
   const forecastData = await forecastResponse.json();

@@ -6,6 +6,7 @@ import {
   weatherForecastByCoords,
 } from "./functions/MainFunctions";
 import Body from "./components/body/Body";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [location, setLocation] = useState("");
@@ -41,8 +42,8 @@ function App() {
   const style = {
     backgroundImage: `url("/${weather.main}.jpg")`,
     backgroundSize: "cover",
-    minHeight: "100vh"
-  }
+    minHeight: "100vh",
+  };
 
   return (
     <div style={style}>
@@ -50,9 +51,8 @@ function App() {
         changeLocation={handleLocation}
         currentLocation={currentLocation}
       />
-      {weather && (
-        <Body weather={weather} forecast={forecast} />
-      )}
+      {weather && <Body weather={weather} forecast={forecast} />}
+      <Footer />
     </div>
   );
 }
