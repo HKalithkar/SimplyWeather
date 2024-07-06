@@ -24,9 +24,7 @@ function DateSlider({ today, selectDate }) {
     }
     setDays(data);
     selectDate(0);
-  }, [today]);
 
-  useEffect(() => {
     const sizeObserver = new ResizeObserver(() => {
       arrowVisibility(sliderRef, setVisibility);
     });
@@ -36,7 +34,7 @@ function DateSlider({ today, selectDate }) {
     }
 
     return () => sizeObserver.disconnect();
-  }, []);
+  }, [today]);
 
   return (
     <div className="date-slider">
