@@ -12,4 +12,4 @@ function Body({weather, forecast}) {
   )
 }
 
-export default Body
+export default Body;

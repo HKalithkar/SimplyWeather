@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { days, months } from "../../../../../functions/MonthsAndDays";
 
 function DateAndTime({ timezone }) {
   const [current, setCurrent] = useState({
@@ -29,30 +30,6 @@ function DateAndTime({ timezone }) {
 
     return () => clearInterval(interval);
   }, [timezone]);
-
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
 
   return (
     <div className="datetime-container">

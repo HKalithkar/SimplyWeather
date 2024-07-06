@@ -5,9 +5,13 @@
   gap: 10px;
 }
 
+.part2-container > * {
+  flex: 1;
+  min-width: 325px;
+}
+
 .city-container {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -27,4 +31,99 @@
 
 .city-items > p {
   min-width: 150px;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.5); 
+  border-radius: 10px;
+  width: 100%;
+}
+
+.date-slider-options {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.date-slider-options > button {
+  min-width: 150px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.arrows {
+  width: 50px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrows:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.date-slider-options > .btn-style {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hidden {
+  display: none;
+}
+
+.three-hour {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.5); 
+}
+
+.three-hour-cards {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hour-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  min-width: 200px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25); 
+}
+
+.hour-temp {
+  font-size: 2.5rem;
 }
