@@ -32,6 +32,7 @@ function DateSlider({ today, selectDate }) {
       sizeObserver.observe(sliderRef.current);
       arrowVisibility(sliderRef, setVisibility);
     }
+    handleBtn(0, setButtonStyle, selectDate, sliderRef);
 
     return () => sizeObserver.disconnect();
   }, [today]);

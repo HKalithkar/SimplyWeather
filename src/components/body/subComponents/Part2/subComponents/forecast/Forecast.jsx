@@ -21,7 +21,7 @@ function Forecast({ timezone, forecast }) {
     const date = new Date();
     date.setSeconds(date.getSeconds() + timezone);
     setToday(date);
-  }, [timezone]);
+  }, [timezone, forecast]);
 
   return (
     <div className="forecast">
