@@ -43,7 +43,7 @@ function ThreeHour({ forecast }) {
         <h2>&lt;</h2>
       </div>
       <div ref={threeHourRef} className="three-hour-cards">
-        {forecast.map((item) => (<HourCard key={++i} data={item} />))}
+        {forecast.length == 0 ? <h3 style={{margin: "auto"}}>NO DATA AVAILABLE</h3> : forecast.map((item) => (<HourCard key={++i} data={item} />))}
       </div>
       <div onClick={() => handleArrow(150, threeHourRef)} className={visibility ? "arrows" : "hidden arrows"}>
         <h2>&gt;</h2>

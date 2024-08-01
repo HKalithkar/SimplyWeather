@@ -32,11 +32,13 @@ const getData = async (
   const forecastData = await forecastResponse.json();
   const temp = forecastData.list;
   const forecast = temp.map((data) => {
+    const date = new Date(data.dt_txt);
+    date.setSeconds(date.getSeconds() + weather.timezone);
     return {
       temp: data.main.temp,
       main: data.weather[0].main,
       description: data.weather[0].description,
-      date: data.dt_txt
+      date: date
     };
   });
 
